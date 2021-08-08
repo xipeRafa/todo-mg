@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>ToDo List</title>
+      <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.0/css/bulma.min.css">
+      <link rel="stylesheet" href="style.css">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+   </head>
+   <script>const ID = document.getElementById.bind(document);</script>
+   <body>
+
+      <img src="images/bg-desktop-dark.jpg" class="background" />  
+
+      <div class="tittle">
+         <h1>TO DO List</h1>
+         <div id="dark-mode-container">
+            <button id="dark-mode"  style="float: right;" class="">theme</button>
+         </div>
+      </div>
+
+      <input
+           class="input" 
+           type="text" 
+           placeholder="search" 
+           onkeydown="javascript: if(event.keyCode == 13); todoApp.filter('content', this.value)"
+      />
+
+      <!-- lists go here -->
+      <div id="lists"> </div>
+
+      <!-- Nav -->
+      <div class="nav-right nav-menu controls">
+         <div id="left"><!-- Items Active: --></div>
+
+          <div>
+            <div  id="all">
+               All
+            </div>
+            <div id="completed">
+               Completed
+            </div>
+            <div id="active">
+               Active
+            </div>
+         </div>
+
+         <div id="remove">
+            Clear Complete
+         </div>
+      </div>
+      <script src="index.js"></script>
+      <script src="theme.js"></script>
+   </body>
+</html>
+
+
