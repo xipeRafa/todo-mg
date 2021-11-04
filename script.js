@@ -86,13 +86,18 @@ const api = {
     let dis = document.getElementsByClassName('disabled');
     for (const el of dis) {
       el.setAttribute('disabled', 'true');
-      el.style.color = 'gray';
+      el.style.color = 'gray!important';
       el.style.cursor = 'none';
+
+      setTimeout(()=>{
+        el.style.cursor = 'not-allowed';
+      },2000)
+     
     }
 
     /*          
                   let x = document.getElementsByClassName("disabled");
-                  
+
                   for (let i=0; i<x.length; i++) {
                       x[i].style.color = "lightgray"; 
                   } 
@@ -105,7 +110,7 @@ const api = {
     /*  btnEdit.previousElementSibling.previousElementSibling.setAttribute("class", 'displayNone') */
 
     let idElementClicked = this.data.find((el) => el.content === txt).id;
-    /* console.log('id of element clicked:', idElementClicked)  */
+     console.log('id of element clicked:', idElementClicked)  
 
     ID('textId').value = txt; // move the text to input text
     ID('textId').style.border = '2px solid lightblue';
