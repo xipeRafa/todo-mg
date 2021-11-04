@@ -221,6 +221,11 @@ class App {
   }
 
   cleanCompleted() {
+    let l = this.data.length-1
+    if(l===0){
+      alert('To Do List is Empty')
+      location.reload();
+    }
     api.completed().then((resolve) => {
       this.data = resolve;
       this.render();
