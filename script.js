@@ -228,6 +228,11 @@ class App {
   }
 
   delet() {
+    let l = this.data.length-1
+    if(l===0){
+      alert('To Do List is Empty')
+      location.reload();
+    }
     api.deleted().then((resolve) => {
       this.data = resolve;
       this.render();
