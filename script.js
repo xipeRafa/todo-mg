@@ -74,6 +74,11 @@ const api = {
     this.data = this.data.filter((el) => {
       return el.isActive === true;
     });
+    let l = this.data.length
+    if(l===0){
+      alert('To Do List is Empty')
+      location.reload();
+    }
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(this.data);
@@ -221,11 +226,6 @@ class App {
   }
 
   cleanCompleted() {
-    let l = this.data.length-1
-    if(l===0){
-      alert('To Do List is Empty')
-      location.reload();
-    }
     api.completed().then((resolve) => {
       this.data = resolve;
       this.render();
