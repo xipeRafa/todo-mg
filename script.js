@@ -89,13 +89,14 @@ const api = {
       el.style.color = 'gray';
       el.style.cursor = 'none';
     }
-
-    /*   
-                                               let x = document.getElementsByClassName("disabled");
-                                                 for (let i=0; i<x.length; i++) {
-                                                 x[i].style.color = "lightgray"; 
-                                               } 
-                                               */
+    
+    /*          
+                  let x = document.getElementsByClassName("disabled");
+                  
+                  for (let i=0; i<x.length; i++) {
+                      x[i].style.color = "lightgray"; 
+                  } 
+    */
 
     let btnEdit = event.target;
 
