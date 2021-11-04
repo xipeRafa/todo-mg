@@ -13,7 +13,7 @@ ID('search').addEventListener('keydown', (e) => {
 
 const api = {
   data: [
-          { id: 1, isActive: false, content: ' done ' },
+          { id: 1, isActive: false, content: 'done' },
           { id: 2, isActive:  true, content: 'active' }
         ],
 
@@ -89,7 +89,7 @@ const api = {
       el.style.color = 'gray';
       el.style.cursor = 'none';
     }
-    
+
     /*          
                   let x = document.getElementsByClassName("disabled");
                   
