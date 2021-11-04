@@ -1,4 +1,4 @@
 # todo-mg
 
 
-<img src="mobil.png"/>
+<img src="./imgs/mobil.png"/>
